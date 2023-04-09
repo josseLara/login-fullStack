@@ -7,5 +7,5 @@ export const userRouter = Router();
 
 userRouter
 .use(comprobartoken)
-.put('/',validateUserData,putUser,generarToken)
+.post('/add',validateUserData,putUser,generarToken)
 .post('/',comprobartoken,validateUserLogin,userAccess,generarToken)

@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 
+
 dotenv.config()
 
 const port = process.env.PORT || 3001;
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cookieParser());
 // route
 app.use('/authorization', userRouter)
+
 
 // controlador de errores
 app.use((err,req,res,next)=>{
